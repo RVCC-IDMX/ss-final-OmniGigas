@@ -40,8 +40,12 @@ body {
 }
 
 a {
+    color: hsl(230, 80%, 40%);
+}
+
+header .container a,
+nav ul a {
     text-decoration: none;
-    color: var(--blue);
 }
 
 ul {
@@ -52,7 +56,7 @@ header {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bolder;
-    background: var(--tan-normal);
+    background: hsl(50 , 100%, 70%);
     padding-bottom: 1rem;
 }
 
@@ -65,7 +69,7 @@ svg {
 }
 
 nav ul{
-    background-color: var(--tan-dark);
+    background-color: hsl(45, 100%, 60%);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     justify-content: center;
@@ -82,7 +86,16 @@ nav ul li a:hover {
 }
 
 nav ul li a:visited {
-    color: var(--violet);
+    color: hsl(310, 80%, 40%);
+}
+
+#main .container a {
+    font-style: italic;
+}
+
+aside a,
+footer a {
+    font-style: italic;
 }
 
 #main {
@@ -95,8 +108,8 @@ nav ul li a:visited {
 }
 
 #main h2 {
-    background: var(--gray-ultra-dark);
-    color: var(--white);
+    background: hsl(50, 0%, 20%);
+    color: hsl(50, 0%, 100%);
     font-size: 1.1rem;
     font-weight: bold;
     text-align: center;
@@ -110,7 +123,7 @@ p {
 }
 
 #about .container ul {
-    border: 4px solid var(--gray-super-light);
+    border: 4px solid hsl(50, 0%, 70%);
     border-style: groove;
     max-height: 200px;
     overflow: auto;
@@ -152,7 +165,7 @@ aside div a {
 }
 
 .page-footer {
-    background: var(--tan-normal);
+    background: hsl(50 , 100%, 70%);
     margin: 1rem auto;
     padding: 1rem;
     max-width: 130ch;

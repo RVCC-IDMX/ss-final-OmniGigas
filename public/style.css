@@ -1,0 +1,223 @@
+/* reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* custom property list */
+:root {
+  --blue: hsl(230, 80%, 40%);
+  --violet: hsl(310, 80%, 40%);
+  --tan-normal: hsl(50 , 100%, 70%);
+  --tan-dark: hsl(45, 100%, 60%);
+  --gray-ultra-light: hsl(50, 0%, 90%);
+  --gray-super-light: hsl(50, 0%, 70%);
+  --gray-ultra-dark: hsl(50, 0%, 20%);
+  --white: hsl(50, 0%, 100%);
+}
+
+/* main code start here */
+body {
+  font-family: "Helvetica";
+  background: linear-gradient(to top, hsl(50deg, 100%, 90%), hsl(50deg, 100%, 80%));
+}
+
+.skip-link {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background: var(--tan-normal);
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+svg {
+  display: none;
+}
+
+nav ul {
+  background-color: var(--tan-dark);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+nav ul li a:hover {
+  font-size: 1.4rem;
+}
+
+nav ul li a:visited {
+  color: var(--violet);
+}
+
+#main {
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 25px;
+  background: linear-gradient(to top, hsl(50deg, 0%, 90%), hsl(50deg, 0%, 100%));
+  max-width: 120ch;
+  font-size: 0.9rem;
+}
+
+#main h2 {
+  background: var(--gray-ultra-dark);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1.3rem auto;
+}
+
+p {
+  padding: 0.2rem 0;
+  text-indent: 3ch;
+}
+
+#about .container ul {
+  border: 4px solid var(--gray-super-light);
+  border-style: groove;
+  max-height: 200px;
+  overflow: auto;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background: linear-gradient(135deg, rgba(191, 192, 205, 0.3333333333) 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(225deg, #bfc0cd 25%, transparent 25%) -10px 0/20px 20px, linear-gradient(315deg, rgba(191, 192, 205, 0.3333333333) 25%, transparent 25%) 0px 0/20px 20px, linear-gradient(45deg, #bfc0cd 25%, #e5e5f7 25%) 0px 0/20px 20px;
+}
+
+#contribute .container ol {
+  padding: 1rem;
+}
+
+aside div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+aside div ul,
+aside div a {
+  font-size: 0.9rem;
+}
+
+.profile .container h4,
+#styles .container h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.page-footer {
+  background: var(--tan-normal);
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 130ch;
+  font-size: 0.9rem;
+}
+
+.page-footer p {
+  text-indent: 0%;
+}
+
+.page-footer .container ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* end of main code */
+/* media query start here */
+@media screen and (min-width: 500px) {
+  header {
+    font-size: 1.3rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    font-size: 1.1rem;
+  }
+  #main {
+    font-size: 1rem;
+  }
+  #main h2 {
+    font-size: 1.2rem;
+  }
+  #about .container ul {
+    font-size: 1.2rem;
+  }
+  aside div ul,
+  aside div a {
+    font-size: 1rem;
+  }
+  .profile .container h4,
+  #styles .container h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  header {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  nav ul {
+    font-size: 1.2rem;
+  }
+  #main {
+    font-size: 1.1rem;
+  }
+  #main h2 {
+    font-size: 1.3rem;
+  }
+  #about .container ul {
+    font-size: 1.3rem;
+  }
+  aside div ul,
+  aside div a {
+    font-size: 1.1rem;
+  }
+  .profile .container h4,
+  #styles .container h2 {
+    font-size: 1.3rem;
+  }
+}
